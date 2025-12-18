@@ -3,7 +3,7 @@ set -euo pipefail
 
 # Config
 TOKEN=$(cat "$(dirname "$0")/token.txt")
-URL="https://wallpapers.by.vincent.mahn.ke/?height=2234&width=3456&token=$TOKEN&darken=60"
+URL="https://wallpapers.by.vincent.mahn.ke/?height=9&width=16&token=$TOKEN&darken=60"
 OUT_DIR="$HOME/Pictures"
 OUT_FILE="$OUT_DIR/auto-wallpaper-$(date '+%Y%m%d').png"
 LOG_FILE="$HOME/Library/Logs/auto-wallpaper.log"
