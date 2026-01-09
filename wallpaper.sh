@@ -33,11 +33,8 @@ fi
 
 # Set wallpaper on all desktops
 osascript <<OSA
-tell application "System Events"
-  set theFile to POSIX file "$OUT_FILE"
-  repeat with d in desktops
-    set picture of d to theFile
-  end repeat
+tell application "Finder"
+  set desktop picture to POSIX file "$OUT_FILE"
 end tell
 OSA
 
