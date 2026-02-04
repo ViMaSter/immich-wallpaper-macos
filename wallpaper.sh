@@ -3,7 +3,7 @@ set -euo pipefail
 
 # Config
 TOKEN=$(cat "$(dirname "$0")/token.txt")
-URL="https://wallpapers.by.vincent.mahn.ke/?height=9&width=16&token=$TOKEN&darken=60&border=0.1"
+URL="https://wallpapers.by.vincent.mahn.ke/?height=9&width=16&token=$TOKEN&darken=60&border=0.1&topOffset=0.25"
 OUT_DIR="$HOME/Pictures"
 OUT_FILE="$OUT_DIR/auto-wallpaper-$(date '+%Y%m%d').png"
 LOG_FILE="$HOME/Library/Logs/auto-wallpaper.log"
@@ -32,10 +32,6 @@ else
 fi
 
 # Set wallpaper on all desktops
-osascript <<OSA
-tell application "Finder"
-  set desktop picture to POSIX file "$OUT_FILE"
-end tell
-OSA
+desktoppr "$OUT_FILE"
 
 log "Wallpaper applied"
