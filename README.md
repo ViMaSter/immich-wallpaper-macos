@@ -10,12 +10,13 @@ Requires an instance of a [wallpaper server](https://github.com/mahn-ke/wallpape
 - `com.vimaster.wallpaper.onwake.plist`: User LaunchAgent to run the script whenever the device wakes from sleep.
 
 ## Install
-1. Clone this repository
-2. Replace all occurences of `/Users/vimaster/rotate/` in `com.vimaster.wallpaper.rotate.plist` with the path to your cloned repo.
-2. Replace all occurences of `/Users/vimaster/rotate/` in `com.vimaster.wallpaper.onwake.plist` with the path to your cloned repo.
-3. Replace all occurences of `wallpapers.by.vincent.mahn.ke` in `wallpaper.sh` with your wallpaper server domain.
-3. Create a file named `token.txt` in the same directory as `wallpaper.sh` containing your APP_TOKEN.
-4. Open Terminal and run:
+1. Install desktoppr using `brew install --cask desktoppr`
+2. Clone this repository
+3. Replace all occurences of `/Users/vimaster/rotate/` in `com.vimaster.wallpaper.rotate.plist` with the path to your cloned repo.
+4. Replace all occurences of `/Users/vimaster/rotate/` in `com.vimaster.wallpaper.onwake.plist` with the path to your cloned repo.
+5. Replace all occurences of `wallpapers.by.vincent.mahn.ke` in `wallpaper.sh` with your wallpaper server domain.
+6. Create a file named `token.txt` in the same directory as `wallpaper.sh` containing your APP_TOKEN.
+7. Open Terminal and run:
 ```bash
 # Make the script executable
 chmod +x ~/rotate/wallpaper.sh
